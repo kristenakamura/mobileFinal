@@ -5,9 +5,9 @@
   <ion-content class="has-subheader">
     <div ng-repeat="loan in loans" class="list card">
       <div class="item item-thumbnail-left">
-        <img src="http://www.kiva.org/img/s300/{{loan.image.id}}.jpg">
+        <img ng-src="http://www.kiva.org/img/s300/{{loan.image.id}}.jpg">
         <h2>{{loan.name}}</h2>
-        <p><img src="/img/flags/{{loan.location.country_code}}.gif"> {{loan.location.town}}, {{loan.location.country}}</p>
+        <p><img ng-src="img/flags/{{loan.location.country_code}}.gif"> {{loan.location.town}}, {{loan.location.country}}</p>
 
       </div>
       <div class="item item-body">
