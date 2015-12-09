@@ -1,0 +1,30 @@
+<ion-view title="{{navTitle}}">
+  <div class="bar bar-subheader bar-balanced">
+    <h2 class="title"> {{header}} </h2>
+  </div>
+  <ion-content class="has-subheader">
+    <div ng-repeat="loan in loans" class="list card">
+      <div class="item item-thumbnail-left">
+        <img src="http://www.kiva.org/img/s300/{{loan.image.id}}.jpg">
+        <h2>{{loan.name}}</h2>
+        <p><img src="img/flags/{{loan.location.country_code}}.gif"> {{loan.location.town}}, {{loan.location.country}}</p>
+
+      </div>
+      <div class="item item-body">
+         <p><span class="kiva--loan-tags">{{loan.sector}} | {{loan.activity}}<span></p>
+        <p>
+          {{loan.name}} is looking for a loan of ${{loan.loan_amount}} {{loan.use}}
+        </p>
+      </div>
+
+      <a class="item item-icon-right balanced" href="#" onclick="window.open('http://www.kiva.org/lend/{{loan.id}}', '_system', 'location=yes'); return false;">
+  
+      <i class="icon ion-chevron-right"></i>
+        Donate Now
+      </a>
+
+      
+    </div>
+  </ion-content>
+
+</ion-view>

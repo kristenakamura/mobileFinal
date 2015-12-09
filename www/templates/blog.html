@@ -1,0 +1,29 @@
+<ion-view title="{{navTitle}}">
+  <div class="bar bar-subheader bar-balanced">
+    <h2 class="title"> {{header}} </h2>
+  </div>
+  <ion-content class="has-subheader">
+  <div ng-repeat="post in posts" class="list card">
+    <div class="item item-body">
+      {{post.title}}
+    </div>
+    <div class="item item-image">
+      <img src="{{post.thumbnail_images.full.url}}">
+    </div>
+
+    <div ng-bind-html="post.excerpt" class="item item-body kiva--item-body-blog">
+      <p>
+        <a href="#" class="subdued">Read More</a>
+        <a href="#" class="subdued">5 Comments</a>
+      </p>
+    </div>
+
+    <a class="item item-icon-right balanced" href="#">
+      <i class="icon ion-chevron-right"></i>
+      Read More
+    </a>
+
+  </div>
+  </ion-content>
+
+</ion-view>

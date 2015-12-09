@@ -1,0 +1,26 @@
+{
+  "name": "mobileFinal",
+  "private": true,
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.1"
+  },
+  "authors": [
+    "kristenakamura <kristen.nakamura@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ng-twitter-api": "~0.1.5"
+  }
+}

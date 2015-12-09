@@ -1,0 +1,36 @@
+
+
+<ion-view title="{{navTitle}}">
+  <div class="bar bar-subheader bar-balanced">
+    <h2 class="title"> {{header}} </h2>
+  </div>
+  <ion-content class="has-subheader">
+
+    <div class="list card" ng-repeat="tweet in tweets">
+
+    <div class="item item-avatar">
+      <img src="{{ tweet.user.profile_image_url }}">
+      <h2>{{tweet.user.name}}</h2>
+      <small>@{{ tweet.user.screen_name }}</small>
+      <small class="time"> {{ tweet.created_at | formatTwitterDate}}</small>
+    </div>
+
+    <div class="item item-body">
+      <img ng-show="{{tweet.entities.media[0].media_url}}" class="full-image" ng-src="{{tweet.entities.media[0].media_url}}">
+
+       <p compile="tweet.text | formatTwitterText"></p>
+    </div>
+    <div class="item item-divider">
+      <p>
+        <a href="#" class="subdued">{{tweet.retweet_count}} Retweeted</a>
+        <a href="#" class="subdued">{{tweet.favorite_count}} Favourited</a>
+      </p>
+    </div>
+
+ 
+    </div>
+
+  </div>
+  </ion-content>
+
+</ion-view>
