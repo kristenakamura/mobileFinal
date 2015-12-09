@@ -7,7 +7,7 @@
       <div class="item item-thumbnail-left">
         <img src="http://www.kiva.org/img/s300/{{loan.image.id}}.jpg">
         <h2>{{loan.name}}</h2>
-        <p><img src="img/flags/{{loan.location.country_code}}.gif"> {{loan.location.town}}, {{loan.location.country}}</p>
+        <p><img src="/img/flags/{{loan.location.country_code}}.gif"> {{loan.location.town}}, {{loan.location.country}}</p>
 
       </div>
       <div class="item item-body">
@@ -17,7 +17,7 @@
         </p>
       </div>
 
-      <a class="item item-icon-right balanced" href="#" onclick="window.open('http://www.kiva.org/lend/{{loan.id}}', '_system', 'location=yes'); return false;">
+      <a class="item item-icon-right balanced" ng-click="openBlogpage('http://www.kiva.org/lend/{{loan.id}}')">
   
       <i class="icon ion-chevron-right"></i>
         Donate Now

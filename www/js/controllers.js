@@ -7,10 +7,15 @@ app.controller('homeCtrl', function ($scope, dataService) {
 
 
 	getLoans();
+    $scope.openBlogpage = function(data) {
+        console.log(data);
+        window.open(data, '_blank', 'location=yes');
+    }
 
 	function getLoans() {
         dataService.getLoans()
             .success(function (data) {
+                console.log(data)
                 $scope.kivaApi = data;
                 $scope.loans = $scope.kivaApi.loans;
             })
@@ -29,7 +34,10 @@ app.controller('blogCtrl', function ($scope, dataService) {
 	getPosts();
 
 	console.log($scope.wordpressApi);
-
+    $scope.openBlogPage = function(data) {
+        console.log(data)
+        window.open(data, '_blank', 'location=yes');
+    }
 	function getPosts() {
         dataService.getPosts()
             .success(function (data) {
