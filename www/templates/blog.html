@@ -13,12 +13,12 @@
 
     <div ng-bind-html="post.excerpt" class="item item-body kiva--item-body-blog">
       <p>
-        <a href="#" class="subdued">Read More</a>
+        <a class="subdued">Read More</a>
         <a href="#" class="subdued">5 Comments</a>
       </p>
     </div>
 
-    <a class="item item-icon-right balanced" href="#">
+    <a class="item item-icon-right balanced" ng-click="openBlogPage(post.url)">
       <i class="icon ion-chevron-right"></i>
       Read More
     </a>
